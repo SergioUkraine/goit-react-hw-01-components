@@ -1,0 +1,41 @@
+.statistics {
+    width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: cubic-bezier(0.47, 0, 0.745, 0.715) 250ms;
+}
+
+.statistics:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    display: block;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #FFF;
+}
+
+.stat-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    width: 100%;
+    padding: 10px 0;
+    list-style: none;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    color: #FFF;
+}
+
+.percentage {
+    display: block;
+    color: #FFF;
+}
