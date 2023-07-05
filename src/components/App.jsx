@@ -19,8 +19,11 @@ export const App = () => {
           stats={user.stats}
         />
       </div>
-      <div>
+      <div className={css.statistics}>
         <Statistics stats={stats} title={title} />
+      </div>
+      <div className={css.statistics}>
+        <Statistics stats={stats} />
       </div>
     </div>
   );
