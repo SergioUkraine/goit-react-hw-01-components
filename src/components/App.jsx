@@ -2,7 +2,7 @@ import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 
 import user from '../data/user.json';
-import stats from '../data/data.json';
+import data from '../data/data.json';
 import css from './App.module.css';
 
 const title = 'Some title';
@@ -20,10 +20,10 @@ export const App = () => {
         />
       </div>
       <div className={css.statistics}>
-        <Statistics stats={stats} title={title} />
+        <Statistics stats={data} title={title} />
       </div>
       <div className={css.statistics}>
-        <Statistics stats={stats} />
+        <Statistics stats={data} />
       </div>
     </div>
   );
