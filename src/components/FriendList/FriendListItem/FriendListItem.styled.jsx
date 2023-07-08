@@ -1,14 +1,18 @@
 import styled from '@emotion/styled';
+import { animations, shadows, colors } from '../../variables';
+
+const color = colors.friendListItem;
 
 export const ListItem = styled.li`
   display: flex;
-  width: 300px;
+  width: 250px;
+  box-sizing: border-box;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #fff;
+  background-color: ${color.background};
   border-radius: 8px;
-  transition: cubic-bezier(0.47, 0, 0.745, 0.715) 250ms;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: ${animations.transition};
+  box-shadow: ${shadows.boxShadow};
 
   :last-child {
     margin-bottom: 0;
@@ -16,6 +20,10 @@ export const ListItem = styled.li`
 
   :hover {
     transform: scale(1.05);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 300px;
   }
 `;
 
@@ -43,7 +51,7 @@ export const Status = styled.span`
 
 export const Avatar = styled.img`
   margin-right: 70px;
-  background-color: #e4e9f0;
+  background-color: ${color.avatarBackground};
   border-radius: 4px;
 `;
 

@@ -2,11 +2,13 @@
 import { Profile } from '../Profile/Profile';
 import { Statistics } from '../Statistics/Statistics';
 import { FriendList } from '../FriendList/FriendList';
+import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 
 //  data
 import user from '../../data/user.json';
 import data from '../../data/data.json';
 import friends from '../../data/friends.json';
+import transactions from '../../data/transactions.json';
 
 //  style
 import {
@@ -35,10 +37,12 @@ export const App = () => {
       <ContainerStatistics>
         <Statistics stats={data} title={title} />
         <Statistics stats={data} />
+        <Statistics stats={data} />
       </ContainerStatistics>
       <ContainerFriendlist>
         <FriendList friends={friends} />
       </ContainerFriendlist>
+      <TransactionHistory items={transactions} />
     </Containter>
   );
 };
