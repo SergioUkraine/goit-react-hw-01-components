@@ -14,10 +14,10 @@ export const Statistics = ({ title, stats }) => {
     <StatisticsSection>
       {title && <StatiscticsTitle>{title}</StatiscticsTitle>}
       <StatisticsList>
-        {stats.map(stat => (
-          <StatisticsListItem key={stat.id} color={getRandomColor()}>
-            <Label>{stat.label}</Label>
-            <Percentage>{stat.percentage}%</Percentage>
+        {stats.map(({ id, label, percentage }) => (
+          <StatisticsListItem key={id} color={getRandomColor()}>
+            <Label>{label}</Label>
+            <Percentage>{percentage}%</Percentage>
           </StatisticsListItem>
         ))}
       </StatisticsList>
@@ -32,6 +32,6 @@ Statistics.propTypes = {
       id: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
-    })
+    }).isRequired
   ),
 };

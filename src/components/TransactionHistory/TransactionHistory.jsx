@@ -21,11 +21,11 @@ export const TransactionHistory = ({ items }) => {
       </TableHead>
 
       <TableBody>
-        {items.map(item => (
-          <TableBodyRow key={item.id}>
-            <TableBodyCell>{item.type}</TableBodyCell>
-            <TableBodyCell>{item.amount}</TableBodyCell>
-            <TableBodyCell>{item.currency}</TableBodyCell>
+        {items.map(({ id, type, amount, currency }) => (
+          <TableBodyRow key={id}>
+            <TableBodyCell>{type}</TableBodyCell>
+            <TableBodyCell>{amount}</TableBodyCell>
+            <TableBodyCell>{currency}</TableBodyCell>
           </TableBodyRow>
         ))}
       </TableBody>
@@ -40,6 +40,6 @@ TransactionHistory.propTypes = {
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
-    })
+    }).isRequired
   ),
 };
